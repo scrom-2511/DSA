@@ -40,10 +40,21 @@ class Recursion_1 {
         }
     }
 
+    //PRINT FROM N->1 (Backtracking)
+    public static void printNto1Back(int i, int n){
+        if (i > n){
+            return;
+        }else{
+            printNto1Back(i+1, n);
+            System.out.println(i);
+        }
+    }
+
     public static void main(String[] args) {
         printNtimes("name", 5);
         printLinearly(1, 10);
         printNto1(10);
         print1toNBack(10);
+        printNto1Back(1,10);
     }
 }
