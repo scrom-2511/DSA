@@ -1,14 +1,27 @@
 class Recursion_1 {
-    //PRINT NAME 5 TIMES
-    public static void print(String name, int n){
-        if (n == 0){
+
+    // PRINT NAME 5 TIMES
+    public static void printNtimes(String name, int n) {
+        if (n == 0) {
             return;
-        }else{
+        } else {
             System.out.println(name);
-            print(name, --n);
+            printNtimes(name, --n);
         }
     }
+
+    // PRINT LINEARLY FROM 1 -> N
+    public static void printLinearly(int i, int n) {
+        if (i > n) {
+            return;
+        } else {
+            System.out.println(i);
+            printLinearly(++i, n);
+        }
+    }
+
     public static void main(String[] args) {
-        print("name", 5);
+        printNtimes("name", 5);
+        printLinearly(1, 10);
     }
 }
