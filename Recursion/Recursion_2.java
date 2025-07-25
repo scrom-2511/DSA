@@ -18,11 +18,23 @@ class Recursion_2 {
         }
     }
     
+    //FACTORIAL OF N
+    public static int factorial(int n){
+        if(n == 0){
+            return 1;
+        }else{
+            return n * factorial(n-1);
+        }
+    }
+    
     public static void main(String[] args) {
         int sumResult1 = sumParameterized(3,0);
         System.out.println(sumResult1);
         
         int sumResult2 = sumParameterized(3);
         System.out.println(sumResult2);
+        
+        int fact = factorial(3);
+        System.out.println(fact);
     }
 }
