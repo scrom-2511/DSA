@@ -21,6 +21,9 @@ class Hashing_1 {
         }
         return hashArr;
     }
+    public static int getNumCount(int[] arr, int num){
+        return arr[num];
+    }
     
     // CHARACTER HASHING
     public static int findMaxChar(String str){
@@ -44,15 +47,21 @@ class Hashing_1 {
         }
         return hashArr;
     }
+    public static int getCharCount(int[] arr, char ch){
+        int i = ch - 33;
+        return arr[i];
+    }
     
     public static void main(String[] args) {
         int arr[] = {3, 4, 5, 6, 2, 6};
         int[] freqArr = hashNum(arr);  
         System.out.println(Arrays.toString(freqArr));
+        System.out.println(getNumCount(freqArr, 6));
         
         
         String testString = "arr!";
         int[] charFreqArr = hashChar(testString);  
         System.out.println(Arrays.toString(charFreqArr));
+        System.out.println(getCharCount(charFreqArr, 'r'));
     }
 }
